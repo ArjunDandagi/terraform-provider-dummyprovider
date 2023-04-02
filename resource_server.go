@@ -11,7 +11,7 @@ func resourceServer() *schema.Resource {
 		Update: resourceServerUpdate,
 		Delete: resourceServerDelete,
 		Schema: map[string]*schema.Schema{
-			"dummyprovider_address": {
+			"name": {
 				Type:     schema.TypeString,
 				Required: true,
 			},
