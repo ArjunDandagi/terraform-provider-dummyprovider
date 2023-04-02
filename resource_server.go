@@ -11,7 +11,7 @@ func resourceServer() *schema.Resource {
 		Update: resourceServerUpdate,
 		Delete: resourceServerDelete,
 		Schema: map[string]*schema.Schema{
-			"address": {
+			"dummyprovider_address": {
 				Type:     schema.TypeString,
 				Required: true,
 			},
@@ -48,5 +48,6 @@ func updateAddress(d *schema.ResourceData, m interface{}) error {
 	return nil
 }
 func resourceServerDelete(d *schema.ResourceData, m interface{}) error {
+	d.SetId("")
 	return nil
 }
